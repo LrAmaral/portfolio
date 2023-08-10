@@ -22,7 +22,7 @@ export const Nav = () => {
     {
       id: '2',
       label: 'projects',
-      href: `/projects`,
+      href: `/project`,
       active: pathname === `/projects`,
     },
     {

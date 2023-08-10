@@ -1,6 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react"
+import { Clipboard } from "./clipboard";
 
 export const Intro = () => {
 
@@ -22,6 +23,7 @@ export const Intro = () => {
             <h1 className=""><span className="dark:text-red-500 text-red-600 font-bold">{word[currentIndex]}</span> developer.</h1>
           </div>
             <code className="font-bold md:text-2xl xs:text-lg items-center">Bringing your ideas into a website.</code>
+            <Clipboard  />
         </div>
       </div>
   )

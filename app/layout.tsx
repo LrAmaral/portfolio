@@ -20,7 +20,7 @@ const esteban = Esteban({
 })
 
 export const metadata: Metadata = {
-  title: 'Lucas Riello',
+  title: 'Lucas Amaral',
   description: 'Portfolio personal page',
 }
 
