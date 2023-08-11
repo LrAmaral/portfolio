@@ -25,12 +25,6 @@ export const Nav = () => {
       href: `/project`,
       active: pathname === `/projects`,
     },
-    {
-      id: '3',
-      label: 'contact',
-      href: '/contact',  
-      active: pathname === `/contact`,
-    },
   ]
 
   return (
