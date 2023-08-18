@@ -39,9 +39,6 @@ export const Nav = () => {
           </div>
       </div>
       <div className="flex flex-row items-center justify-end md:gap-4 xs:gap-2 xs:mr-4 md:mr-0">
-      <Link href={'https://www.instagram.com/amaraldev/'} target="_blank">
-          <Instagram className="hover:text-zinc-500 text-pink-500 transition-colors ease-in-out cursor-pointer"/>
-        </Link>
         <Link href={'https://github.com/LrAmaral'} target="_blank">
           <Github className="hover:text-zinc-500 transition-colors ease-in-out cursor-pointer"/>
         </Link>
