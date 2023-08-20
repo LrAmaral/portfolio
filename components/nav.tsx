@@ -32,7 +32,7 @@ export const Nav = () => {
       <div className="flex gap-4 xs:ml-4 md:ml-0">
           <div className="flex flex-row gap-4 items-center">
               {routes.map((index) => (
-                <Link href={index.href} key={index.id} className={cn("cursor-pointer", index.active ? "hover:text-zinc-500" : 'hover:text-zinc-500')}>
+                <Link href={index.href} key={index.id} className={cn("cursor-pointer", index.active ? "hover:text-zinc-500 text-muted-foreground" : 'hover:text-zinc-500')}>
                   {index.label}
                 </Link>
               ))}
