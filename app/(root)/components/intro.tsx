@@ -6,8 +6,9 @@ import { Clipboard } from "./clipboard";
 export const Intro = () => {
 
   const [word, setWords] = useState([
-    'Creative', 'Web', 'React'
+    'Creative', 'Web', 'React', 'Frontend'
   ]);
+
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {

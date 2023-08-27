@@ -1,6 +1,6 @@
 'use client'
 
-import { Calendar, Code2, Cpu, HelpingHand } from "lucide-react"
+import { Briefcase, Calendar, Code2, Cpu, HelpingHand } from "lucide-react"
 
 export const Experience = () => {
   return (
@@ -28,9 +28,10 @@ export const Experience = () => {
       </code>
         <div className="flex flex-col justify-center items-center mb-28">
           <h2 className="text-2xl font-bold font-alt mt-10 mb-8 flex items-center gap-2">Professional experience <HelpingHand /></h2>
-          <div className="border-l p-2">
+          <div className="border-l  p-2">
             <div className="text-xl font-semibold flex flex-col gap-2">
-              <p>Store attendant</p>
+              <p>Computer Store Clerk</p>
+              <div className="text-sm flex items-center gap-2 w-2/4 justify-center"><span className="scale-75"><Briefcase /></span>Imac Informática.</div>
               <p className="flex gap-4 items-center"><Calendar /> January 2021 - December 2021</p>
             </div>
           </div>

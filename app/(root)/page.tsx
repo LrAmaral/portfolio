@@ -1,6 +1,5 @@
 import { About } from "./components/about"
 import { Intro } from "./components/intro"
-import techs from "./utils/tech"
 
 const Overview = () => {
   return (
