@@ -15,13 +15,13 @@ module.exports = {
         lg: '1024px',
         xl: '1280px',
       },
-      fontFamily: {
-        sans: 'var(--font-est)',
-        alt: 'var(--font-mont)',
+      colors: {
+        nav: '#151618',
+        alt: '#6B69D6',
       },
-      backgroundImage: {
-        circularLight: 'repeating-radial-gradient(rgba(0,0,0,0.4) 2px, #fff 5px, #fff 130px);'
-      }
+      fontFamily: {
+        sans: 'var(--font-mont)',
+      },
     },
   },
   plugins: [require('tailwind-scrollbar')],

@@ -1,11 +1,18 @@
-import { About } from "./components/about"
-import { Intro } from "./components/intro"
+import Project from "@/components/layout/project"
+import { About } from "../../components/layout/about"
+import { Intro } from "../../components/layout/intro"
+import  Who  from "@/components/layout/who"
+import { Experience } from "@/components/layout/experience"
+import Design from "@/components/layout/design"
 
 const Overview = () => {
   return (
-    <main className="flex flex-col w-full items-center select-none cursor-default">
+    <main id="start" className="flex flex-col w-full items-center select-none cursor-default">
       <Intro />
-      <About/>
+      <Who />
+      {/* <Experience /> */}
+      <Project />
+      <Design/>
     </main>
   )
 }

@@ -1,9 +1,7 @@
 //import { Nav } from '@/components/layout/nav'
-import { Nav } from '@/components/nav'
+import { Nav } from '../components/layout/nav'
 import './globals.css'
-import type { Metadata } from 'next'
-import { Esteban, Montserrat } from 'next/font/google'
-import { ThemeProvider } from '@/providers/theme-provider'
+import { Montserrat } from 'next/font/google'
 
 const montserrat = Montserrat({ 
   subsets: ['latin'], 
@@ -12,15 +10,8 @@ const montserrat = Montserrat({
   variable: '--font-mont',
 })
 
-const esteban = Esteban({
-  subsets: ['latin'],
-  display: 'swap',
-  weight: '400',
-  variable: '--font-est',
-})
-
-export const metadata: Metadata = {
-  title: 'Lucas Amaral',
+export const metadata = {
+  title: '{ Lucas Amaral }',
   description: 'Portfolio personal page',
 }
 
@@ -31,15 +22,13 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" 
-    className={`${esteban.variable} ${montserrat.variable} font-sans`}
+    className={`${montserrat.variable} font-sans`}
     >
-    <body className="text-black dark:text-white">
-      <ThemeProvider attribute='class' defaultTheme='system' enableSystem>
-        <main className='h-screen flex flex-col'>
+    <body className="bg-nav text-white scrollbar-thin scrollbar-track-nav scrollbar-thumb-alt">
+        <main className='relative h-screen flex flex-col '>
             <Nav />
             {children}
         </main>
-      </ThemeProvider>
     </body>
     </html>
   )
