@@ -3,9 +3,9 @@ import Link from 'next/link'
 
 function Project() {
   return (
-    <main id='project' className='flex flex-col w-full h-screen items-center font-alt xs:mb-20 md:mb-0'>
-      <div className='h-screen flex md:flex-row xs:flex-col gap-8 items-start justify-center w-3/4 mt-20 md:mb-0 xs:mb-20'>
-         <div className='flex md:flex-col lg:flex-row xl:flex-row xs:flex-col gap-8'>
+    <main id='project' className='flex flex-col w-full h-screen justify-center items-center font-alt xs:mb-20 md:mb-0'>
+      <div className='h-screen flex md:flex-col xs:flex-col gap-8 items-start justify-center w-3/4 mt-20 md:mb-0 xs:mb-20'>
+         <div className='flex xs:flex-col md:flex-col gap-8'>
           <Image className="rounded-2xl" src={'/shop.jpg'} loading={'lazy'} quality={100} width={1000} height={500} alt='print of project'/>
           <div className='flex gap-4 items-start flex-col'>
               <h1 className='md:text-3xl xs:text-xl font-sans font-bold'>Urbanavenue</h1>

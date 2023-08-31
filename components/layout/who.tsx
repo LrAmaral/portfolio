@@ -1,13 +1,8 @@
-'use client'
-
-import { Github, Linkedin } from "lucide-react"
-import Link from "next/link"
-import { Separator } from "../ui/separator"
 import Image from "next/image"
 
 function Who() {
   return (
-    <div id="who" className="md:w-[78rem] xs:w-3/4 flex flex-col h-screen xs:mb-24 md:mb-0">
+    <div id="who" className="md:w-[78rem] xs:w-3/4 flex flex-col h-screen">
         <div className="border-alt shadow-alt shadow-lg hover:shadow-md transition ease-in-out duration-1000 border rounded-2xl md:p-20 xs:p-10 flex xs:flex-col md:flex-row xs:gap-[3rem] md:gap-[4rem]">
         <div className="xs:w-3/4 md:w-2/4">
           <Image src={'/profile.png'} alt="perfil" width={600} height={300}/>
