@@ -23,7 +23,7 @@ export const Intro = () => {
           <div className="font-alt xs:text-5xl md:text-6xl">
             <h1 className=""><span className="text-alt font-bold">{word[currentIndex]}</span> developer.</h1>
           </div>
-            <code className="font-bold md:text-2xl xs:text-lg items-center">Bringing your ideas into a website.</code>
+            <code className="font-bold md:text-2xl xs:text-md items-center">Bringing your ideas into a website.</code>
             <Clipboard  />
         </div>
       </div>
