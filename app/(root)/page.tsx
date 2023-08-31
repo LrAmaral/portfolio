@@ -1,5 +1,4 @@
 import Project from "@/components/layout/project"
-import { About } from "../../components/layout/about"
 import { Intro } from "../../components/layout/intro"
 import  Who  from "@/components/layout/who"
 import { Experience } from "@/components/layout/experience"

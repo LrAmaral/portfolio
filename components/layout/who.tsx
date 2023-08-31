@@ -15,16 +15,16 @@ function Who() {
               Lucas Amaral
             </h2>
             <h3 className="xs:text-sm md:text-xl mb-4">Frontend Developer && Creative Guy</h3>
-            <p className="xs:text-xs text-base">
+            <p className="xs:text-xs md:text-base">
               Hi there, I'm Lucas, based in São Paulo <span className="font-bold">(BR)</span>, a student guy, tech enthusiastic 
               and passionate for creating modern websites, I think it's amazing to combine a beautiful user interface 
               <span className="font-bold"> (UI)</span> with a good user experience <span className="font-bold">(UX)</span>.
             </p>
-            <p className="xs:text-xs text-base">
+            <p className="xs:text-xs md:text-base">
               I'm always looking forward to improve myself to solving problems, I like 
               challenges and always trying to do the best I can to being at the right solution as fast as I can.
             </p>
-            <p className="xs:text-xs text-base">Nowadays I'm searching for my first opportunity to make my carrier at the world of programming, with you have interest at some job I have done, 
+            <p className="xs:text-xs md:text-base">Nowadays I'm searching for my first opportunity to make my carrier at the world of programming, with you have interest at some job I have done, 
               please send me a message I'm always up to talk to everyone.
             </p>
          </div>
