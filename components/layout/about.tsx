@@ -1,4 +1,3 @@
-import { Experience } from "./experience"
 
 export const About = () => {
   return (
@@ -19,7 +18,6 @@ export const About = () => {
           </p>
         </div>
       </div>
-      <Experience />
     </div>
   )
 }

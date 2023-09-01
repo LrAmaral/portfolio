@@ -1,8 +1,9 @@
 import Project from "@/components/layout/project"
 import { Intro } from "../../components/layout/intro"
 import  Who  from "@/components/layout/who"
-import { Experience } from "@/components/layout/experience"
 import Design from "@/components/layout/design"
+import { Experience } from "@/components/layout/experience"
+import Knowledge from "@/components/layout/knowledge"
 
 const Overview = () => {
   return (
@@ -11,7 +12,8 @@ const Overview = () => {
       <Who />
       {/* <Experience /> */}
       <Project />
-      <Design/>
+      <Design />
+      <Knowledge />
     </main>
   )
 }
