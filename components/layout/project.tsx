@@ -19,7 +19,7 @@ function Project() {
                 experience to do that project.
               </p>
               <p className='text-red-500'>{'Project not finished yet.'}</p>
-              <span>Follow the link: <Link href={"https://urbanavenue.vercel.app/"} className='text-alt hover:underline' target='_blank'>urbanavenue</Link> {'|'} <Link href={"https://github.com/LrAmaral/urbanavenue"} className='text-alt hover:underline' target='_blank'>github repo</Link></span>
+              <span>Follow the link: <Link href={"https://urbanavenue.vercel.app/"} className='text-alt hover:underline' target='_blank'>urbanavenue</Link> {'|'} <Link href={"https://github.com/LrAmaral/urbanavenue"} className='text-alt hover:underline' target='_blank'>github repo.</Link></span>
             </div>
          </div>
       </div>
