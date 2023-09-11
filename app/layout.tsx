@@ -1,5 +1,3 @@
-//import { Nav } from '@/components/layout/nav'
-import Link from 'next/link'
 import { Nav } from '../components/layout/nav'
 import './globals.css'
 import { Montserrat } from 'next/font/google'

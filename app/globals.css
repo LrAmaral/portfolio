@@ -2,7 +2,10 @@
 @tailwind components;
 @tailwind utilities;
  
-body {
+:root {
   -webkit-font-smoothing: antialiased;
   text-rendering: optimizeLegibility;
+  font-synthesis: none;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
 }

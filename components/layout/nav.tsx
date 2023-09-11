@@ -1,8 +1,10 @@
 'use client'
 
-import { Github, GithubIcon, Linkedin, LinkedinIcon, Menu, X } from "lucide-react";
+import { GithubIcon, LinkedinIcon, Menu, X } from "lucide-react";
 import Link from "next/link"
 import { useEffect, useState } from "react";
+
+import { routes } from '@/utils/routes'
 
 export const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -28,39 +30,6 @@ export const Nav = () => {
     };
   }, [menuOpen])
 
-  const routes = [
-    {
-      id: '1',
-      label: 'start',
-      href: '#start',
-    },
-    {
-      id: '2',
-      label: 'who I am',
-      href: '#who',
-    },
-    {
-      id: '3',
-      label: 'experiences',
-      href: `#experience`,
-     
-    },
-    {
-      id: '4',
-      label: 'projects',
-      href: `#project`,
-    },
-    {
-      id: '5',
-      label: 'designs',
-      href: `#design`,
-    },
-    {
-      id: '6',
-      label: 'knowledges',
-      href: `#knowledge`,
-    },
-  ]
 
   return (
     <nav className="bg-nav fixed w-full">

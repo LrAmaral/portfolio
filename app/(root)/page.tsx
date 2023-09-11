@@ -10,7 +10,7 @@ const Overview = () => {
     <main id="start" className="flex flex-col w-full items-center select-none cursor-default">
       <Intro />
       <Who />
-      {/* <Experience /> */}
+      <Experience />
       <Project />
       <Design />
       <Knowledge />

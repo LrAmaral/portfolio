@@ -1,6 +1,6 @@
 import Link from "next/link";
 
-export const Clipboard = () => {
+export const Email = () => {
   return (
     <section className='clipboard-container'>
       <div className='clipboard-icon'>

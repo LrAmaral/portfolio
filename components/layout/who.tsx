@@ -2,15 +2,13 @@ import Image from "next/image"
 
 function Who() {
   return (
-    <div id="who" className="md:w-[78rem] xs:w-3/4 flex flex-col xs:h-[140vh] md:h-screen items-center justify-center">
+    <div id="who" className="md:w-[78rem] xs:w-3/4 flex flex-col gap-14 xs:h-[140vh] md:h-screen items-center justify-center">
+        <h2 className="text-4xl underline decoration-alt">Who I am</h2>
         <div className="border-alt shadow-alt shadow-lg hover:shadow-md transition ease-in-out duration-1000 border rounded-2xl md:p-20 xs:p-10 flex xs:flex-col md:flex-row xs:gap-[3rem] md:gap-[4rem]">
         <div className="xs:w-3/4 md:w-2/4">
           <Image src={'/profile.png'} alt="perfil" width={600} height={300}/>
         </div>
          <div className="flex flex-col gap-2">
-          <h2 className="text-2xl font-bold font-alt text-alt">
-            Who I am 
-            </h2>
             <h2 className="xs:text-xl md:text-4xl font-bold font-alt">
               Lucas Amaral
             </h2>
