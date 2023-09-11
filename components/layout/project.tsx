@@ -7,7 +7,7 @@ function Project() {
       <h2 className="text-4xl underline decoration-alt">Project's</h2>
       <div className='h-screen flex md:flex-col xs:flex-col gap-8 items-center justify-center w-3/4'>
          <div className='flex xs:flex-col md:flex-row gap-8'>
-          <Image className="rounded-2xl" src={'/shop.jpg'} loading={'lazy'} quality={100} width={700} height={500} alt='print of project'/>
+          <Image className="rounded-2xl" src={'/assets/shop.jpg'} loading={'lazy'} quality={100} width={700} height={500} alt='print of project'/>
           <div className='flex gap-4 items-start flex-col'>
               <h1 className='md:text-3xl xs:text-xl font-sans font-bold'>Urbanavenue</h1>
               <p>

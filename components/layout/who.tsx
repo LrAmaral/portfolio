@@ -6,7 +6,7 @@ function Who() {
         <h2 className="text-4xl underline decoration-alt">Who I am</h2>
         <div className="border-alt shadow-alt shadow-lg hover:shadow-md transition ease-in-out duration-1000 border rounded-2xl md:p-20 xs:p-10 flex xs:flex-col md:flex-row xs:gap-[3rem] md:gap-[4rem]">
         <div className="xs:w-3/4 md:w-2/4">
-          <Image src={'/profile.png'} alt="perfil" width={600} height={300}/>
+          <Image src={'/assets/profile.png'} alt="perfil" width={600} height={300}/>
         </div>
          <div className="flex flex-col gap-2">
             <h2 className="xs:text-xl md:text-4xl font-bold font-alt">
