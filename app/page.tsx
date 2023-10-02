@@ -1,8 +1,8 @@
-import { Experience } from "@/components/layout/Experience"
-import { Intro } from "@/components/layout/Intro"
-import { Project } from "@/components/layout/Project"
-import  { Who }  from "@/components/layout/Who"
-import { Contact } from "@/components/layout/Contact"
+import  Experience  from "@/components/layout/Experience"
+import  Intro  from "@/components/layout/Intro"
+import  Project  from "@/components/layout/Project"
+import   Who   from "@/components/layout/Who"
+import  Contact  from "@/components/layout/Contact"
 
 export default function Overview() {
   return (

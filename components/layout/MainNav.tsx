@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 
 import { routes } from '@/app/utils/routes'
 
-export function MainNav() {
+export default function MainNav() {
   const [menuOpen, setMenuOpen] = useState(false)
 
   const toggleMenu = () => setMenuOpen(!menuOpen)

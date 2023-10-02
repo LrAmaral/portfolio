@@ -1,4 +1,4 @@
-export function Experience() {
+export default function Experience() {
   return (
     <div id="experience" className="w-full h-screen items-center justify-center flex">
       <div className="max-w-full mx-auto">

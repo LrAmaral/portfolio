@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export function Project() {
+export default function Project() {
   return (
     <div id="project" className="w-full h-screen md:h-[110vh] items-center justify-center flex">
       <div className="max-w-full mx-auto">

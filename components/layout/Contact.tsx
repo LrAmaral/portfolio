@@ -1,7 +1,7 @@
 import { GithubIcon, LinkedinIcon } from "lucide-react"
 import Link from "next/link"
 
-export function Contact() {
+export default function Contact() {
   return (
     <div id="contact" className="w-full h-screen items-center justify-center flex">
       <div className="max-w-full mx-auto">

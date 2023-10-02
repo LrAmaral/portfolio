@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export function Intro() {
+export default function Intro() {
   return (
     <div className='w-full h-screen flex flex-col justify-center items-center'>
         <div className="flex-col md:flex-row flex justify-center items-center gap-14">
