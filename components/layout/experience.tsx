@@ -1,4 +1,4 @@
-export default function Experience() {
+const Experience = () =>{
   return (
     <div id="experience" className="w-full h-screen items-center justify-center flex">
       <div className="max-w-full mx-auto">
@@ -19,3 +19,5 @@ export default function Experience() {
     </div>
   )
 }
+
+export default Experience

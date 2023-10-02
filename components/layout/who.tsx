@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from "react";
 
-export default function Who() {
+const Who = () => {
 
   const [experienceMonths, setExperienceMonths] = useState(1);
   const referenceDate: Date = new Date("2023-09-18");
@@ -63,3 +63,5 @@ export default function Who() {
   </div>
   )
 }
+
+export default Who

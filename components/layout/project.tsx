@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 
-export default function Project() {
+const Project = () => {
   return (
     <div id="project" className="w-full h-screen md:h-[110vh] items-center justify-center flex">
       <div className="max-w-full mx-auto">
@@ -31,3 +31,5 @@ export default function Project() {
     </div>
   )
 }
+
+export default Project
