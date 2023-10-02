@@ -1,6 +1,6 @@
 import { Montserrat } from 'next/font/google'
 
-import { MainNav } from '../components/layout/MainNav'
+import MainNav from '../components/MainNav'
 import './styles/globals.css'
 
 const montserrat = Montserrat({ 
