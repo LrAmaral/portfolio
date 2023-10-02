@@ -1,8 +1,8 @@
-import Experience  from "../components/layout/Experience"
-import Intro  from "../components/layout/Intro"
-import Project  from "../components/layout/Project"
-import  Who   from "../components/layout/Who"
-import Contact  from "../components/layout/Contact"
+import Experience  from "../components/Experience"
+import Intro  from "../components/Intro"
+import Project  from "../components/Project"
+import  Who   from "../components/Who"
+import Contact  from "../components/Contact"
 
 const Overview = () => {
   return (
