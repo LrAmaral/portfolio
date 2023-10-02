@@ -4,7 +4,7 @@ const Intro = () => {
   return (
     <div className='w-full h-screen flex flex-col justify-center items-center'>
         <div className="flex-col md:flex-row flex justify-center items-center gap-14">
-          <Image src={'/profile.png'} alt="photo" width={300} height={300}/>
+          <Image src={'/assets/profile.png'} alt="photo" width={300} height={300}/>
           <div className="space-y-8">
             <div>
               <p className="text-neutral-400">Hello, I'm</p>
