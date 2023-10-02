@@ -1,31 +1,21 @@
-'use client'
+import Image from "next/image";
 
-import { useEffect, useState } from "react"
-import { Email } from "./email";
-
-export const Intro = () => {
-
-  const [word, setWords] = useState([
-    'Creative', 'Web', 'React', 'Frontend'
-  ]);
-
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % word.length);
-    }, 4000); // Defina o intervalo de tempo em milissegundos (aqui, 4000 ms = 4 segundos)
-  }, []);
-
+export function Intro() {
   return (
-    <div className='lg:w-full md:w-3/4 xs:w-3/4 h-screen flex md:flex-row xs:flex-col justify-around items-center font-sans text-justify'>
-        <div className="flex-col flex justify-center items-center gap-4">
-          <div className="font-alt xs:text-5xl md:text-6xl">
-            <h1 className=""><span className="text-alt font-bold">{word[currentIndex]}</span> developer.</h1>
+    <div className='w-full h-screen flex flex-col justify-center items-center'>
+        <div className="flex-col md:flex-row flex justify-center items-center gap-14">
+          <Image src={'/profile.png'} alt="photo" width={300} height={300}/>
+          <div className="space-y-8">
+            <div>
+              <p className="text-neutral-400">Hello, I'm</p>
+              <p className="text-3xl font-bold">Lucas Amaral</p>
+              <p className="text-2xl font-bold text-neutral-400">Frontend Developer</p>
+            </div>
+            <p className="font-bold md:text-3xl items-center">
+                I Bring Your Ideas To Life Through  <span className="text-alt">Programming</span>.
+            </p>
           </div>
-            <code className="font-bold md:text-2xl xs:text-md items-center">Bringing your ideas into a website.</code>
-            <Email />
-        </div>
       </div>
+    </div>
   )
 }

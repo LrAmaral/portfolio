@@ -1,11 +1,10 @@
-import { Nav } from '../components/layout/nav'
-import './globals.css'
 import { Montserrat } from 'next/font/google'
+
+import { MainNav } from '../components/layout/MainNav'
+import './styles/globals.css'
 
 const montserrat = Montserrat({ 
   subsets: ['latin'], 
-  display: 'swap', 
-  weight: '600', 
   variable: '--font-mont',
 })
 
@@ -21,14 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" 
-    className={`${montserrat.variable} font-sans`}
+    className={`${montserrat.variable} font-sans overflow-x-hidden scrollbar-thin scrollbar-track-nav scrollbar-thumb-alt`}
     >
-    <body className="bg-nav text-white scrollbar-thin scrollbar-track-nav scrollbar-thumb-alt">
-        <main className='relative h-screen flex flex-col '>
-            <Nav />
+      <body className="bg-nav text-white cursor-default select-none">
+          <MainNav />
             {children}
-        </main>
-    </body>
+      </body>
     </html>
   )
 }

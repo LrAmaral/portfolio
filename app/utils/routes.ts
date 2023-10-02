@@ -1,33 +1,28 @@
 export const routes = [
   {
     id: '1',
-    label: 'start',
+    label: 'Start',
     href: '#start',
   },
   {
     id: '2',
-    label: 'who I am',
+    label: 'Who I Am',
     href: '#who',
   },
   {
     id: '3',
-    label: 'experiences',
+    label: 'Experiences',
     href: `#experience`,
    
   },
   {
     id: '4',
-    label: 'projects',
+    label: 'Projects',
     href: `#project`,
   },
   {
     id: '5',
-    label: 'designs',
-    href: `#design`,
-  },
-  {
-    id: '6',
-    label: 'knowledges',
-    href: `#knowledge`,
+    label: 'Contact',
+    href: `#contact`,
   },
 ]

@@ -1,31 +1,33 @@
-import Image from 'next/image'
-import Link from 'next/link'
+import Image from "next/image";
+import Link from "next/link";
 
-function Project() {
+export function Project() {
   return (
-    <main id='project' className='flex flex-col w-full h-screen justify-center items-center font-alt'>
-      <h2 className="text-4xl underline decoration-alt">Project's</h2>
-      <div className='h-screen flex md:flex-col xs:flex-col gap-8 items-center justify-center w-3/4'>
-         <div className='flex xs:flex-col md:flex-row gap-8'>
-          <Image className="rounded-2xl" src={'/assets/shop.jpg'} loading={'lazy'} quality={100} width={700} height={500} alt='print of project'/>
-          <div className='flex gap-4 items-start flex-col'>
-              <h1 className='md:text-3xl xs:text-xl font-sans font-bold'>Urbanavenue</h1>
-              <p>
-                E-commerce full stack application using framework Next.js, TailwindCSS and Prisma ORM,
-                It's a big project what will be used to a Final Paper project of the college.  
-              </p>
-              <p> 
-                We work with the framework Next because the facility to create websites with them,
-                and all the versability we give to us to developing, it has been a such a great and amazing 
-                experience to do that project.
-              </p>
-              <p className='text-red-500 text-sm'>{'Project not finished yet.'}</p>
-              <span>Follow the link: <Link href={"https://urbanavenue.vercel.app/"} className='text-alt hover:underline' target='_blank'>urbanavenue</Link> {'|'} <Link href={"https://github.com/LrAmaral/urbanavenue"} className='text-alt hover:underline' target='_blank'>github repo.</Link></span>
-            </div>
-         </div>
+    <div id="project" className="w-full h-screen md:h-[110vh] items-center justify-center flex">
+      <div className="max-w-full mx-auto">
+      <div className="flex flex-col border-alt items-center gap-16">
+        <div className="flex items-center flex-col gap-2">
+          <p className="text-neutral-400">Browse My Recent</p>
+          <p className="text-3xl font-bold">Projects</p>
+        </div>
+        <div className="space-y-4">
+          <Link href="https://urbanavenue.vercel.app/" target="_blank">
+            <Image src={'/assets/shop.jpg'} alt="imagem" width={1920} height={1080} className="rounded-xl"/>
+          </Link>
+          <p className="md:text-xl font-bold">UrbanAvenue - <span className="text-sm text-alt">In progress</span></p>
+          <p>
+            React.JS <span className="text-alt">- </span>
+            Next.JS  <span className="text-alt">- </span>
+            Typescript <span className="text-alt">- </span>
+            TailwindCSS <span className="text-alt">- </span>
+            Prisma ORM <span className="text-alt">- </span>
+            MySQL <span className="text-alt">- </span>
+            Axios <span className="text-alt">- </span>
+            Zod.
+          </p>
+        </div>
       </div>
-    </main>
+      </div>
+    </div>
   )
 }
-
-export default Project

@@ -1,34 +1,65 @@
-import Image from "next/image"
+'use client'
 
-function Who() {
+import { useState, useEffect } from "react";
+
+export function Who() {
+
+  const [experienceMonths, setExperienceMonths] = useState(1);
+  const referenceDate: Date = new Date("2023-09-18");
+
+  useEffect(() => {
+    const today: Date = new Date();
+    const timeDifference: number = today.getTime() - referenceDate.getTime();
+    const daysDifference: number = timeDifference / (1000 * 60 * 60 * 24);
+    const newExperienceMonths: number = Math.floor(daysDifference / 30) + 1;
+    setExperienceMonths(newExperienceMonths);
+  }, []);
+
   return (
-    <div id="who" className="md:w-[78rem] xs:w-3/4 flex flex-col gap-14 xs:h-[140vh] md:h-screen items-center justify-center">
-        <h2 className="text-4xl underline decoration-alt">Who I am</h2>
-        <div className="border-alt shadow-alt shadow-lg hover:shadow-md transition ease-in-out duration-1000 border rounded-2xl md:p-20 xs:p-10 flex xs:flex-col md:flex-row xs:gap-[3rem] md:gap-[4rem]">
-        <div className="xs:w-3/4 md:w-2/4">
-          <Image src={'/assets/profile.png'} alt="perfil" width={600} height={300}/>
-        </div>
-         <div className="flex flex-col gap-2">
-            <h2 className="xs:text-xl md:text-4xl font-bold font-alt">
-              Lucas Amaral
-            </h2>
-            <h3 className="xs:text-sm md:text-xl mb-4">Frontend Developer && Creative Guy</h3>
-            <p className="xs:text-xs md:text-base">
-              Hi there, I'm Lucas, based in São Paulo <span className="font-bold">(BR)</span>, a student guy, tech enthusiastic 
-              and passionate for creating modern websites, I think it's amazing to combine a beautiful user interface 
-              <span className="font-bold"> (UI)</span> with a good user experience <span className="font-bold">(UX)</span>.
-            </p>
-            <p className="xs:text-xs md:text-base">
-              I'm always looking forward to improve myself to solving problems, I like 
-              challenges and always trying to do the best I can to being at the right solution as fast as I can.
-            </p>
-            <p className="xs:text-xs md:text-base">Nowadays I'm searching for my first opportunity to make my carrier at the world of programming, with you have interest at some job I have done, 
-              please send me a message I'm always up to talk to everyone.
-            </p>
-         </div>
-        </div>
+    <div id="who" className="w-full h-screen items-center justify-center flex">
+      <div className="max-w-full mx-auto">
+        <div className="items-center flex flex-col gap-16">
+          <div className="flex items-center flex-col gap-2">
+            <p className="text-neutral-400">Get To Know More</p>
+            <p className="text-3xl font-bold">Who I Am</p>
+          </div>
+          <div className="justify-center items-center gap-16 flex flex-col md:flex-row">
+              <div className="space-y-6">
+                <div className="flex md:flex-row flex-col items-center justify-center gap-6">
+                  <div className="border border-alt w-full md:w-2/4 h-32 flex gap-1 flex-col items-center justify-center rounded-xl">
+                        <p className="font-semibold text-lg">
+                          Experience
+                        </p>
+                        <p className="text-alt">
+                          {experienceMonths}+ month
+                        </p>
+                        <p>
+                          Frontend Development
+                        </p>
+                    </div>
+                    <div className="border border-alt w-full md:w-2/4 h-32 gap-1 flex flex-col items-center justify-center rounded-xl">
+                      <p className="font-semibold text-lg">
+                          Education
+                      </p>
+                      <p className="text-alt">
+                        2021 - 2024
+                      </p>
+                      <p>
+                        System Analysis and Development 
+                      </p>
+                    </div>
+                </div>
+                  <p className="tracking-wide text-justify indent-12">
+                    Hi there, I'm Lucas. I live in São Paulo, Brazil, since I was a kid, I'm always be a creative guy and I really liked tech stuff, I finded my way to express my creative 
+                    in the world of programming.
+                    I'm passionate about creating modern website 
+                    applications with responsive designs and I love learning new things,
+                    I strive to do my best to find the right solution as quickly as possible.
+                  </p>
+              </div>
+          </div>
+      </div>
     </div>
+  </div>
   )
 }
-
-export default Who
