@@ -11,7 +11,7 @@ const Intro = () => {
               <p className="text-2xl md:text-3xl font-bold">Lucas Amaral</p>
               <p className="text-xl md:text-2xl font-bold text-neutral-400">Frontend Developer</p>
             </div>
-            <p className="font-bold md:text-3xl items-center">
+            <p className="font-bold text-2xl md:text-3xl items-center ">
                 I Bring Your Ideas To Life Through  <span className="text-alt">Programming</span>.
             </p>
           </div>

@@ -15,7 +15,7 @@ const Project = () => {
             <Image src={'/assets/shop.jpg'} alt="imagem" width={1920} height={1080} className="rounded-xl"/>
           </Link>
           <p className="md:text-xl font-bold">UrbanAvenue - <span className="text-sm text-alt">In progress</span></p>
-          <p>
+          <p className="text-justify">
             React.JS <span className="text-alt">- </span>
             Next.JS  <span className="text-alt">- </span>
             Typescript <span className="text-alt">- </span>
