@@ -5,7 +5,7 @@ import { useState, useEffect } from "react";
 const Who = () => {
 
   const [experienceMonths, setExperienceMonths] = useState(1);
-  const referenceDate: Date = new Date("2023-09-18");
+  const referenceDate: Date = new Date("2023-09-02");
 
   useEffect(() => {
     const today: Date = new Date();
