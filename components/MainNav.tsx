@@ -3,8 +3,12 @@
 import { Menu, X } from "lucide-react";
 import Link from "next/link"
 import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from 'framer-motion'
 
+import { menuVars } from "@/app/utils/menuVars";
+import { containerVars } from '@/app/utils/containerVars';
 import { routes } from '@/app/utils/routes'
+import MobileNavLink from "./MobilenNavLink";
 
 const MainNav = () => {
   const [menuOpen, setMenuOpen] = useState(false)
@@ -12,8 +16,7 @@ const MainNav = () => {
   const toggleMenu = () => setMenuOpen(!menuOpen)
 
   useEffect(() => {
-    const setResize = () =>
-      innerWidth >= 768 && menuOpen ? setMenuOpen(false) : null
+    const setResize = () => innerWidth >= 768 && menuOpen ? setMenuOpen(false) : null
 
     window.addEventListener('resize', setResize)
   }, [menuOpen])
@@ -29,9 +32,9 @@ const MainNav = () => {
             </Link>
             <div className="hidden md:flex text-lg gap-6">
                 {routes.map(({href, id, label}) => (
-                  <Link href={href} key={id} className="cursor-pointer hover:text-alt transition duration-200 ease-in-out">
-                    {label}
-                  </Link> 
+                  <div key={id} onClick={menuClose} >
+                    <MobileNavLink href={href} label={label} />
+                  </div>
                 ))}
             </div>
             <div className="flex w-full justify-between md:hidden">
@@ -42,25 +45,34 @@ const MainNav = () => {
                   {menuOpen ? <X size={28} /> : <Menu size={28} />}
               </button>
             </div>
+        <AnimatePresence>
         {menuOpen && ( 
-          <div className="fixed md:hidden left-0 top-0 bg-nav w-full h-screen">
-            <div 
+          <motion.div 
+          variants={menuVars} 
+          initial="initial" 
+          animate="animate" 
+          exit="exit" 
+          className="fixed md:hidden origin-right left-0 top-0 bg-nav w-full h-screen">
+            <motion.div 
                 onClick={menuClose}
-                className="py-24 px-6 gap-20 flex flex-col items-center text-2xl"
+                variants={containerVars}
+                initial="initial"
+                animate="open"
+                exit="initial"
+                className="py-24 px-6 gap-24 flex flex-col items-center text-2xl"
               >
               {routes.map(({id, label, href}) => (
-                <Link
-                  href={href}
-                  key={id}
-                  onClick={menuClose}
-                  className="hover:text-alt transition duration-200 ease-in-out"
-                >
-                  {label}
-                </Link>
+                <div key={id} className="overflow-hidden" onClick={menuClose} >
+                  <MobileNavLink
+                    href={href}
+                    label={label}
+                  />
+                </div>
               ))}
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         )}
+        </AnimatePresence>
         </div>
       </nav>
     </>

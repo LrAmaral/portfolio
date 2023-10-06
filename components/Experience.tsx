@@ -9,10 +9,10 @@ const Experience = () =>{
            </div>
             <div className="flex flex-col border-alt items-center gap-2">
                   <p className="md:text-xl">Frontend Developer on a Volunteer Work at InkPen.</p>
-                  <p className="md:text-lg">- September 2023 - The present moment</p>
-                <span className="h-6 bg-alt w-0.5 animate-pulse" />
+                  <p className="md:text-lg">September 2023 - The present moment</p>
+                <span className="h-6 bg-alt w-0.5" />
                   <p className="md:text-xl">Computer Store Clerk at Imac Informática.</p>
-                  <p className="md:text-lg">- January 2021 - December 2021</p>
+                  <p className="md:text-lg">January 2021 - December 2021</p>
             </div>
           </div>
       </div>

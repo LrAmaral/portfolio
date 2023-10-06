@@ -16,7 +16,7 @@ const Who = () => {
   }, []);
 
   return (
-    <div id="who" className="w-full h-screen items-center justify-center flex">
+    <div id="who" className="w-full h-screen max-h-full items-center justify-center flex">
       <div className="max-w-full mx-auto">
         <div className="items-center flex flex-col gap-16">
           <div className="flex items-center flex-col gap-2">
@@ -49,7 +49,7 @@ const Who = () => {
                       </p>
                     </div>
                 </div>
-                  <p className="tracking-wide text-justify indent-12">
+                  <p className="tracking-wide text-justify text-sm md:text-base indent-12">
                     Hi there, I'm Lucas. I live in São Paulo, Brazil, since I was a kid, I'm always be a creative guy and I really liked tech stuff, I finded my way to express my creative 
                     in the world of programming.
                     I'm passionate about creating modern website 
