@@ -9,7 +9,7 @@ type MobileNavLinkProps = {
 
 const MobileNavLink = ({href, label}: MobileNavLinkProps) => {
   return (
-    <motion.div variants={mobileLinkVars} className="hover:text-alt transition duration-200 ease-in-out" >
+    <motion.div variants={mobileLinkVars} className="hover:text-alt hover:opacity-70 transition duration-200 ease-in-out" >
       <Link href={href}>
         {label}
       </Link>
