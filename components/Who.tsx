@@ -1,22 +1,50 @@
 'use client'
 
-import { useState, useEffect } from "react";
+import { useScroll, useTransform, motion } from "framer-motion";
+import { useState, useEffect, useRef } from "react";
 
 const Who = () => {
-
   const [experienceMonths, setExperienceMonths] = useState(1);
+  const [experienceLabel, setExperienceLabel] = useState("month");
   const referenceDate: Date = new Date("2023-09-02");
-
+  
   useEffect(() => {
     const today: Date = new Date();
     const timeDifference: number = today.getTime() - referenceDate.getTime();
     const daysDifference: number = timeDifference / (1000 * 60 * 60 * 24);
-    const newExperienceMonths: number = Math.floor(daysDifference / 30) + 1;
-    setExperienceMonths(newExperienceMonths);
-  }, []);
+    let newExperienceMonths: number = Math.floor(daysDifference / 30) + 1;
+
+    if (newExperienceMonths === 1) {
+      setExperienceLabel('month')
+    }
+    else if (newExperienceMonths > 1 && newExperienceMonths < 12) {
+      setExperienceLabel('months')
+    }
+    else if (newExperienceMonths >= 12 && newExperienceMonths <= 24) {
+      newExperienceMonths = 1
+      setExperienceLabel("year")
+    } 
+    else {
+      newExperienceMonths = 1 
+      const timePass = newExperienceMonths + 1
+      newExperienceMonths = timePass
+      setExperienceLabel("years") // this is not dynamic yet
+    } 
+   
+    setExperienceMonths(newExperienceMonths)
+  }, [])
+
+
+  const targetRef = useRef<HTMLDivElement>(null) 
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['end end', 'end start']
+  })
+
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0])
 
   return (
-    <div id="who" className="w-full h-screen max-h-full items-center justify-center flex">
+    <motion.div id="who" style={{ opacity }} ref={targetRef} className="w-full h-screen max-h-full items-center justify-center flex">
       <div className="max-w-full mx-auto">
         <div className="items-center flex flex-col gap-16">
           <div className="flex items-center flex-col gap-2">
@@ -31,7 +59,7 @@ const Who = () => {
                           Experience
                         </p>
                         <p className="text-alt">
-                          {experienceMonths}+ month
+                          {experienceMonths}+ {experienceLabel}
                         </p>
                         <p>
                           Frontend Development
@@ -49,18 +77,16 @@ const Who = () => {
                       </p>
                     </div>
                 </div>
-                  <p className="tracking-wide text-justify text-sm md:text-base indent-12">
-                    Hi there, I'm Lucas. I live in São Paulo, Brazil, since I was a kid, I'm always be a creative guy and I really liked tech stuff, I finded my way to express my creative 
-                    in the world of programming.
-                    I'm passionate about creating modern website 
-                    applications with responsive designs and I love learning new things,
-                    I strive to do my best to find the right solution as quickly as possible.
+                  <p className="tracking-wide text-justify text-sm md:text-base">
+                    Hi there, I'm Lucas. I live in São Paulo, Brazil, since I was a kid, I'm always be a creative guy, then, 
+                    I finded my way to express my creativity in the world of programming, I'm really passionate about creating 
+                    modern website applications with awesome designs and always searching for improve myself to learning more.
                   </p>
               </div>
           </div>
       </div>
     </div>
-  </div>
+  </motion.div>
   )
 }
 

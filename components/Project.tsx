@@ -1,9 +1,21 @@
+'use client'
+
 import Image from "next/image";
 import Link from "next/link";
+import { useTransform, useScroll, motion } from "framer-motion";
+import { useRef } from "react";
 
 const Project = () => {
+  const targetRef = useRef<HTMLDivElement>(null) 
+  const { scrollYProgress } = useScroll({
+    target: targetRef,
+    offset: ['end end', 'end start']
+  })
+
+  const opacity = useTransform(scrollYProgress, [0, 0.4], [1, 0])
+
   return (
-    <div id="project" className="w-full h-screen items-center justify-center flex">
+    <motion.div style={{opacity}} ref={targetRef} id="project" className="w-full h-screen items-center justify-center flex">
       <div className="max-w-full mx-auto">
       <div className="flex flex-col border-alt items-center gap-16 md:gap-8">
         <div className="flex items-center flex-col gap-2">
@@ -28,7 +40,7 @@ const Project = () => {
         </div>
       </div>
       </div>
-    </div>
+    </motion.div>
   )
 }
 

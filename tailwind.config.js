@@ -20,7 +20,7 @@ module.exports = {
         alt: '#6B69D6',
       },
       fontFamily: {
-        sans: 'var(--font-mont)',
+        sans: 'var(--font-fig)',
       },
     },
   },

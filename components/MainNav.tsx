@@ -26,7 +26,7 @@ const MainNav = () => {
   return (
     <>
       <nav className="fixed bg-nav w-full z-10">
-        <div className="max-w-[76.875rem] h-16 mx-auto flex justify-between items-center px-6">
+        <div className="max-w-[76.875rem] h-20 mx-auto flex justify-between items-center px-8">
             <Link href={''} className="md:block font-bold text-2xl select-none ease-in-out hidden transition-colors text-alt">
                 {'{ Amaral }'}
             </Link>
@@ -59,7 +59,7 @@ const MainNav = () => {
                 initial="initial"
                 animate="open"
                 exit="initial"
-                className="py-24 px-6 gap-24 flex flex-col items-center text-2xl"
+                className="py-24 gap-16 flex flex-col items-center text-xl"
               >
               {routes.map(({id, label, href}) => (
                 <div key={id} className="overflow-hidden" onClick={menuClose} >

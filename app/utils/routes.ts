@@ -21,6 +21,11 @@ export const routes = [
     href: `#project`,
   },
   {
+    id: 'read',
+    label: 'Read',
+    href: `#read`,
+  },
+  {
     id: 'contact',
     label: 'Contact',
     href: `#contact`,

@@ -1,11 +1,11 @@
-import { Montserrat } from 'next/font/google'
+import { Figtree } from 'next/font/google'
 
 import MainNav from '../components/MainNav'
 import './styles/globals.css'
 
-const montserrat = Montserrat({ 
+const figtree = Figtree({ 
   subsets: ['latin'], 
-  variable: '--font-mont',
+  variable: '--font-fig',
 })
 
 export const metadata = {
@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" 
-    className={`${montserrat.variable} font-sans overflow-x-hidden scrollbar-thin scrollbar-track-nav scrollbar-thumb-alt`}
+    className={`${figtree.variable} font-sans overflow-x-hidden scrollbar-thin scrollbar-track-nav scrollbar-thumb-alt`}
     >
       <body className="bg-nav text-white cursor-default select-none">
           <MainNav />
