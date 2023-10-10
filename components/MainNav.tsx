@@ -37,13 +37,31 @@ const MainNav = () => {
                   </div>
                 ))}
             </div>
-            <div className="flex w-full justify-between md:hidden">
-              <Link href={'/'} className="text-2xl font-bold select-none ease-in-out transition-colors text-alt z-10">
+            <div className="flex w-full justify-between md:hidden z-10">
+              <Link href={'/'} className="text-2xl font-bold select-none ease-in-out transition-colors text-alt">
                   {'{ Amaral }'}
               </Link>
-              <button onClick={toggleMenu} className="z-10">
-                  {menuOpen ? <X size={28} /> : <Menu size={28} />}
-              </button>
+              <motion.button 
+                animate={menuOpen ? 'open' : 'closed'}
+                onClick={toggleMenu} 
+                className='flex flex-col space-y-1 justify-center scale-150'
+                >
+                  <motion.span variants={{
+                    closed: { rotate: 0, y: 0 },
+                    open: { rotate: 45, y: 5 },
+                  }} 
+                    className='w-5 h-px bg-white block'></motion.span>
+                  <motion.span variants={{ 
+                    closed: { opacity: 1, transition: { duration: 0.1 } },
+                    open: { opacity: 0, transition: { duration: 0.1 } },
+                  }} 
+                  className='w-5 h-px bg-white block'></motion.span>
+                  <motion.span variants={{
+                    closed: { rotate: 0, y: 0 },
+                    open: { rotate: -45, y: -5 },
+                  }} 
+                  className='w-5 h-px bg-white block'></motion.span>
+            </motion.button>
             </div>
         <AnimatePresence>
         {menuOpen && ( 
@@ -62,7 +80,7 @@ const MainNav = () => {
                 className="py-24 gap-16 flex flex-col items-center text-xl"
               >
               {routes.map(({id, label, href}) => (
-                <div key={id} className="overflow-hidden" onClick={menuClose} >
+                <div key={id} className="" onClick={menuClose} >
                   <MobileNavLink
                     href={href}
                     label={label}
