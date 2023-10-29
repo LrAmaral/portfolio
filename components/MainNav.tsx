@@ -1,27 +1,9 @@
-'use client'
-
-import { Menu, X } from "lucide-react";
 import Link from "next/link"
-import { useEffect, useState } from "react";
-import { AnimatePresence, motion } from 'framer-motion'
 
-import { menuVars } from "@/app/utils/menuVars";
-import { containerVars } from '@/app/utils/containerVars';
-import { routes } from '@/app/utils/routes'
-import MobileNavLink from "./MobilenNavLink";
+import HamburguerMenu from "./HamburguerMenu";
+import WebLinks from "./WebLinks";
 
 const MainNav = () => {
-  const [menuOpen, setMenuOpen] = useState(false)
-
-  const toggleMenu = () => setMenuOpen(!menuOpen)
-
-  useEffect(() => {
-    const setResize = () => innerWidth >= 768 && menuOpen ? setMenuOpen(false) : null
-
-    window.addEventListener('resize', setResize)
-  }, [menuOpen])
-
-  const menuClose = () => setMenuOpen(false)
 
   return (
     <>
@@ -30,67 +12,13 @@ const MainNav = () => {
             <Link href={''} className="md:block font-bold text-2xl select-none ease-in-out hidden transition-colors text-alt">
                 {'{ Amaral }'}
             </Link>
-            <div className="hidden md:flex text-lg gap-6">
-                {routes.map(({href, id, label}) => (
-                  <div key={id} onClick={menuClose} >
-                    <MobileNavLink href={href} label={label} />
-                  </div>
-                ))}
-            </div>
+            <WebLinks />
             <div className="flex w-full justify-between md:hidden z-10">
-              <Link href={'/'} className="text-2xl font-bold select-none ease-in-out transition-colors text-alt">
+              <Link href={'/'} className="text-2xl font-bold text-alt">
                   {'{ Amaral }'}
-              </Link>
-              <motion.button 
-                animate={menuOpen ? 'open' : 'closed'}
-                onClick={toggleMenu} 
-                className='flex flex-col space-y-1 justify-center scale-150'
-                >
-                  <motion.span variants={{
-                    closed: { rotate: 0, y: 0 },
-                    open: { rotate: 45, y: 5 },
-                  }} 
-                    className='w-5 h-px bg-white block'></motion.span>
-                  <motion.span variants={{ 
-                    closed: { opacity: 1, transition: { duration: 0.1 } },
-                    open: { opacity: 0, transition: { duration: 0.1 } },
-                  }} 
-                  className='w-5 h-px bg-white block'></motion.span>
-                  <motion.span variants={{
-                    closed: { rotate: 0, y: 0 },
-                    open: { rotate: -45, y: -5 },
-                  }} 
-                  className='w-5 h-px bg-white block'></motion.span>
-            </motion.button>
+              </Link>         
+              <HamburguerMenu />   
             </div>
-        <AnimatePresence>
-        {menuOpen && ( 
-          <motion.div 
-          variants={menuVars} 
-          initial="initial" 
-          animate="animate" 
-          exit="exit" 
-          className="fixed md:hidden origin-right left-0 top-0 bg-nav w-full h-screen">
-            <motion.div 
-                onClick={menuClose}
-                variants={containerVars}
-                initial="initial"
-                animate="open"
-                exit="initial"
-                className="py-24 gap-16 flex flex-col items-center text-xl"
-              >
-              {routes.map(({id, label, href}) => (
-                <div key={id} className="" onClick={menuClose} >
-                  <MobileNavLink
-                    href={href}
-                    label={label}
-                  />
-                </div>
-              ))}
-            </motion.div>
-          </motion.div>
-        )}
-        </AnimatePresence>
         </div>
       </nav>
     </>
