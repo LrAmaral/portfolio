@@ -4,7 +4,6 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTransform, useScroll, motion } from "framer-motion";
 import { useRef } from "react";
-import { Loader } from "lucide-react";
 
 const Project = () => {
   const targetRef = useRef<HTMLDivElement>(null) 
@@ -17,7 +16,7 @@ const Project = () => {
 
   return (
     <motion.div style={{opacity}} ref={targetRef} id="project" className="w-full h-screen md:h-[110vh] items-center justify-center flex">
-      <div className="max-w-5xl mx-auto">
+      <div className="max-w-4xl mx-auto">
       <div className="flex flex-col border-alt items-center gap-16 md:gap-8">
         <div className="flex items-center flex-col gap-2">
           <p className="text-neutral-400">Browse My Recent</p>

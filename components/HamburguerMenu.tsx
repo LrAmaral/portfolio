@@ -1,9 +1,10 @@
 'use client'
 
-import { containerVars } from '@/app/utils/containerVars'
-import { menuVars } from '@/app/utils/menuVars'
 import { AnimatePresence, motion } from 'framer-motion'
 import React, { useEffect, useState } from 'react'
+
+import { containerVars } from '@/app/utils/containerVars'
+import { menuVars } from '@/app/utils/menuVars'
 import MobileNavLink from './MobilenNavLink'
 
 const HamburguerMenu = () => {
@@ -16,8 +17,6 @@ const HamburguerMenu = () => {
 
     window.addEventListener('resize', setResize)
   }, [menuOpen])
-
-  const menuClose = () => setMenuOpen(false)
 
   const routes = [
     {
@@ -63,17 +62,17 @@ const HamburguerMenu = () => {
         closed: { rotate: 0, y: 0 },
         open: { rotate: 45, y: 5 },
       }} 
-        className='w-5 h-px bg-white block'></motion.span>
+        className='w-5 h-px bg-white block' />
       <motion.span variants={{ 
-        closed: { opacity: 1, transition: { duration: 0.1 } },
-        open: { opacity: 0, transition: { duration: 0.1 } },
+        closed: { x: 0, opacity: 1, transition: { duration: 0.6 } },
+        open: { x: -50, opacity: 0, transition: { duration: 0.6 } },
       }} 
-      className='w-5 h-px bg-white block'></motion.span>
+      className='w-5 h-px bg-white block' />
       <motion.span variants={{
         closed: { rotate: 0, y: 0 },
         open: { rotate: -45, y: -5 },
       }} 
-      className='w-5 h-px bg-white block'></motion.span>
+      className='w-5 h-px bg-white block' />
       </motion.button>
       <AnimatePresence>
         {menuOpen && ( 
@@ -84,7 +83,7 @@ const HamburguerMenu = () => {
           exit="exit" 
           className="fixed md:hidden origin-right left-0 top-0 flex flex-col justify-center bg-nav w-full h-screen">
             <motion.div 
-                onClick={menuClose}
+                onClick={toggleMenu}
                 variants={containerVars}
                 initial="initial"
                 animate="open"
@@ -92,7 +91,7 @@ const HamburguerMenu = () => {
                 className="py-24 gap-16 flex flex-col items-center text-xl"
               >
               {routes.map(({id, label, href}) => (
-                <div key={id} onClick={menuClose} >
+                <div key={id} onClick={toggleMenu} >
                   <MobileNavLink
                     href={href}
                     label={label}

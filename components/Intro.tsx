@@ -26,7 +26,7 @@ const Intro = () => {
               <p className="text-xl md:text-3xl font-bold">Lucas Amaral</p>
               <p className="text-lg md:text-2xl opacity-60">Frontend Developer</p>
             </div>
-            <p className="font-extrabold text-xl md:text-3xl items-center">
+            <div className="font-extrabold text-xl md:text-3xl items-center">
                 I Bring Your Ideas To Life Through 
                 <span className="text-alt">
                   <TypewriterComponent options={{
@@ -39,7 +39,7 @@ const Intro = () => {
                     loop: true,
                     }}/> 
                 </span>
-            </p>
+            </div>
           </div>
       </div>
     </motion.section>

@@ -1,9 +1,7 @@
 'use client'
 
-import { useScroll, useTransform, motion } from "framer-motion"
 import { GithubIcon, LinkedinIcon } from "lucide-react"
 import Link from "next/link"
-import { useRef } from "react"
 
  const Contact = () => {
   return (

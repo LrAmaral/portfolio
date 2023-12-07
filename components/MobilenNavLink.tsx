@@ -1,7 +1,8 @@
+import Link  from 'next/link'
+import { motion } from 'framer-motion'
+
 import { MobileNavLinkProps } from '@/app/@types/mobilenav'
 import { mobileLinkVars } from '@/app/utils/mobileLinkVars'
-import { motion } from 'framer-motion'
-import Link  from 'next/link'
 import { cn } from '../app/lib/utils'
 
 const MobileNavLink = ({ href, label }: MobileNavLinkProps) => {
