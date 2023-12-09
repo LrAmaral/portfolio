@@ -1,6 +1,6 @@
 ## Portfolio | Lucas Amaral
 
-A brief summary of me and my experiences with developer, showing project's I did, my skills and more.
+A brief summary of me, showing my experiences with developer, project's I did, all my social medias and contact.
 
 ## 🛠 Tools
 
